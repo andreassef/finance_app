@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Feather } from '@expo/vector-icons';
 import { 
     Container,
     Header,
@@ -11,9 +10,12 @@ import {
     UserGreeting,
     UserName,
     Icon,
-    HighlightCards
+    HighlightCards,
+    Transactions,
+    Title
 } from './styles';
 import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard } from '../../components/TransactionCard';
 
 export function Dashboard() {
     return (
@@ -38,6 +40,11 @@ export function Dashboard() {
                 <HighlightCard type="down" title="Saidas" amount="R$ 50,0" lastTransaction="11/11/2021" />
                 <HighlightCard type="total" title="Total" amount="R$ 50,0" lastTransaction="12/11/2021" />
             </HighlightCards>
+
+            <Transactions>
+                <Title>Listagem</Title>
+                <TransactionCard />
+            </Transactions>
         </Container>
     )
 }
